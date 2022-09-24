@@ -5,4 +5,5 @@ conn = mariadb.connect(user=dbcreds.user, password=dbcreds.password, host=dbcred
 
 cursor = conn.cursor()
 
-items_info = cursor.excecute('CALL get_items_info()')
+cursor.excecute('CALL get_items_info()')
+item_info = cursor.fetchall()
